@@ -1,6 +1,7 @@
 <h2>All dinners</h2>
 
 <% @list.each do |dinner| %>
+  <h4><%= dinner.id %></h4>
   <h4><%= dinner.main_source %></h4>
   <ul>
     <li><%= dinner.sauce %></li>
