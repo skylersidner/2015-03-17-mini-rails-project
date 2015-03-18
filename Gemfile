@@ -40,3 +40,7 @@ gem 'jquery-rails'
 
 # this fixes the "test-case" issue that prevents rails console from running;
 gem 'test-unit'
+group :development do
+  gem 'pry'
+  gem 'pry-rails'
+end
