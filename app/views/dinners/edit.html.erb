@@ -1,0 +1,10 @@
+<h2>Edit Dinner #<%= @dinner.id %></h2>
+
+<form action="/update">
+  <p>Main Source of Protein: <input type="text" name="main_source" value="<%= @dinner.main_source %>"></p>
+  <p>Sauce: <input type="text" name="sauce" value="<%= @dinner.sauce %>"></p>
+  <p>Starch: <input type="text" name="starch" value="<%= @dinner.starch %>"></p>
+  <p>Vegetable: <input type="text" name="veggie" value="<%= @dinner.veggie %>"></p>
+  <input type="hidden" name="id" value="<%= @dinner.id %>">
+  <input type="submit" value="Update This!">
+</form>
