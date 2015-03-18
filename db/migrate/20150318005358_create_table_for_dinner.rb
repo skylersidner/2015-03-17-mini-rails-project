@@ -5,5 +5,6 @@ class CreateTableForDinner < ActiveRecord::Migration
       t.string :sauce
       t.string :starch
       t.string :veggie
+    end
   end
 end

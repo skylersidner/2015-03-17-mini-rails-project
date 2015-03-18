@@ -36,3 +36,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+
+# this fixes the "test-case" issue that prevents rails console from running;
+gem 'test-unit'
