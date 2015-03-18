@@ -1,4 +1,5 @@
 MiniRailsDemo::Application.routes.draw do
+  get "/dinners" => 'dinners#list_all'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
