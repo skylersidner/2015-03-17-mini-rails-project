@@ -1,3 +1,60 @@
-// Place all the styles related to the dinners controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #6A6A61;
+}
+
+h2 {
+  justify: center;
+}
+
+nav {
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+.nav_bar {
+  overflow: auto;
+  background-color: #1D2326;
+  border: 3px solid #DDDCC5;
+  border-radius: .7em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.home {
+  float: left;
+  text-transform: uppercase;
+}
+
+.home a {
+  
+}
+
+.crud {
+  float: right;
+}
+
+.crud p {
+  color: #DDDCC5;
+  margin: 0;
+}
+
+.crud a {
+
+}
+
+a:link {
+  color: #611427;
+}
+
+a:hover {
+  color: #DDDCC5;
+}
+
+a:visited {
+  color: #958976;
+}
