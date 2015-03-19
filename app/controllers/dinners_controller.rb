@@ -1,4 +1,13 @@
 class DinnersController < ApplicationController
+    
+  def index
+    @list = Dinner.all
+  end
+  
+  def new
+    
+  end
+  
   def save
     @dinner = Dinner.create(main_source: params[:main_source], sauce: params[:sauce], starch: params[:starch], veggie: params[:veggie])
     redirect_to "/dinners/#{@dinner.id}/show"
@@ -22,8 +31,5 @@ class DinnersController < ApplicationController
     @dinner = Dinner.find_by_id(params[:id])
     @dinner.destroy
   end
-    
-  def index
-    @list = Dinner.all
-  end
+
 end
