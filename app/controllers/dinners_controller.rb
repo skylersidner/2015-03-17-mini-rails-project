@@ -23,7 +23,7 @@ class DinnersController < ApplicationController
     @dinner.destroy
   end
     
-  def list_all
+  def index
     @list = Dinner.all
   end
 end
