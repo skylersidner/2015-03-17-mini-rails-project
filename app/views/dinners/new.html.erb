@@ -1,7 +1,10 @@
 <h2>Create Dinners</h2>
 
+<% @dinner.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>
 
-<%= form_for @dinners, html: {class: "new_dinner_form"} do |f| %>
+<%= form_for @dinner, html: {class: "new_dinner_form"} do |f| %>
   <%= f.label "main_source" %>
   <%= f.text_field("main_source") %><br>
   

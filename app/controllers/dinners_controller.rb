@@ -5,12 +5,19 @@ class DinnersController < ApplicationController
   end
   
   def new
-    @dinners = Dinner.new
+    @dinner = Dinner.new
   end
   
   def create
-    @dinner = Dinner.create(main_source: params[:main_source], sauce: params[:sauce], starch: params[:starch], veggie: params[:veggie])
-    redirect_to "/dinners/#{@dinner.id}/show"
+    @dinner = Dinner.new(params[:dinner])
+    if @dinner.save
+      redirect_to "/dinners"
+    else      
+      render "new"
+    end
+    
+    # @dinner = Dinner.create(main_source: params[:main_source], sauce: params[:sauce], starch: params[:starch], veggie: params[:veggie])
+    # redirect_to "/dinners/#{@dinner.id}/show"
   end
   
   def show
