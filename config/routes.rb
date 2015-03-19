@@ -5,8 +5,8 @@ MiniRailsDemo::Application.routes.draw do
   get "/dinners" => 'dinners#index', :as => "dinners"
   # New
   get "/dinners/new" => 'dinners#new', :as => "new_dinner"
-  # # Create
-  # post "/dinners" => 'dinners#create', :as => "dinners"
+  # Create
+  post "/dinners" => 'dinners#create', :as => "dinners"
   # # Show
   # get "/books/:id" => 'dinners#show', :as => "dinner"
   # # Edit
@@ -21,7 +21,7 @@ MiniRailsDemo::Application.routes.draw do
   
   # get "/create" => 'dinners#create'
   
-  get "/save" => 'dinners#save'
+  # get "/save" => 'dinners#save'
   
   get "/dinners/:id/show" => 'dinners#show'
   

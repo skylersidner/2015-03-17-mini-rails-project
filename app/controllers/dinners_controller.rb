@@ -8,7 +8,7 @@ class DinnersController < ApplicationController
     
   end
   
-  def save
+  def create
     @dinner = Dinner.create(main_source: params[:main_source], sauce: params[:sauce], starch: params[:starch], veggie: params[:veggie])
     redirect_to "/dinners/#{@dinner.id}/show"
   end
