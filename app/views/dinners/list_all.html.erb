@@ -1,13 +1,15 @@
 <h2>All dinners</h2>
 
 <% @list.each do |dinner| %>
-  <h4>#<%= dinner.id %>: <%= dinner.main_source %></h4>
-  <ul>
-    <li><%= dinner.sauce %></li>
-    <li><%= dinner.starch %></li>
-    <li><%= dinner.veggie %></li>
-  </ul>
-  <form action="/dinners/<%= dinner.id %>/show">
-    <input type="submit" value="See this dinner">
-  </form>
+  <div class="list_item">
+    <h4>#<%= dinner.id %>: <%= dinner.main_source %></h4>
+    <ul>
+      <li><%= dinner.sauce %></li>
+      <li><%= dinner.starch %></li>
+      <li><%= dinner.veggie %></li>
+    </ul>
+    <form action="/dinners/<%= dinner.id %>/show">
+      <input type="submit" value="See this dinner">
+    </form>
+  </div>
 <% end %>

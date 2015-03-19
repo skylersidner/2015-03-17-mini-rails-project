@@ -7,16 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="nav_bar">
-  <div class="home">
-    <a href="/">Home</a>
-  </div>
-  <div class="crud">
-    <p><a href="/create">Create New</a> | <a href="/list_all">List All</a><p>
-  </div>
-</nav>
-<%= yield %>
 
+<div class="nav_block">
+  <nav>
+    <ul>
+      <li><a href="/" class="home">Home</a></li>
+      <li><a href="/create" class="create">Create New</a></li>
+      <li><a href="/list_all" class="list_all">List All</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="main_block">
+  <%= yield %>
+</div>
 
 </body>
 </html>
