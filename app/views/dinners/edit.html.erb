@@ -1,10 +1,21 @@
 <h2>Edit Dinner #<%= @dinner.id %></h2>
 
-<form action="/update">
-  <p>Main Source of Protein: <input type="text" name="main_source" value="<%= @dinner.main_source %>"></p>
-  <p>Sauce: <input type="text" name="sauce" value="<%= @dinner.sauce %>"></p>
-  <p>Starch: <input type="text" name="starch" value="<%= @dinner.starch %>"></p>
-  <p>Vegetable: <input type="text" name="veggie" value="<%= @dinner.veggie %>"></p>
-  <input type="hidden" name="id" value="<%= @dinner.id %>">
-  <input type="submit" value="Update This!">
-</form>
+<% @dinner.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>
+
+<%= form_for @dinner, html: {class: "dinner_form"} do |f| %>
+  <%= f.label "main_source" %>
+  <%= f.text_field("main_source") %><br>
+  
+  <%= f.label "sauce" %>
+  <%= f.text_field("sauce") %><br>
+  
+  <%= f.label "starch" %>
+  <%= f.text_field("starch") %><br>
+  
+  <%= f.label "veggie" %>
+  <%= f.text_field("veggie") %><br>
+  
+  <%= f.submit "Update This!"%>
+<% end %>

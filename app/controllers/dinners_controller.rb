@@ -15,9 +15,6 @@ class DinnersController < ApplicationController
     else      
       render "new"
     end
-    
-    # @dinner = Dinner.create(main_source: params[:main_source], sauce: params[:sauce], starch: params[:starch], veggie: params[:veggie])
-    # redirect_to "/dinners/#{@dinner.id}/show"
   end
   
   def show
@@ -30,13 +27,17 @@ class DinnersController < ApplicationController
   
   def update
     @dinner = Dinner.find_by_id(params[:id])
-    @dinner.update_attributes(main_source: params[:main_source], sauce: params[:sauce], starch: params[:starch], veggie: params[:veggie])
-    redirect_to "/dinners/#{@dinner.id}/show"
+    if @dinner.update_attributes(params[:dinner])
+      redirect_to "/dinners/#{@dinner.id}"
+    else      
+      render "edit"
+    end
   end
   
-  def destroy
+  def delete
     @dinner = Dinner.find_by_id(params[:id])
     @dinner.destroy
+    redirect_to "/dinners"
   end
 
 end

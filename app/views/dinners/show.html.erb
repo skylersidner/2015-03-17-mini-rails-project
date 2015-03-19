@@ -9,6 +9,7 @@
 <form action="/dinners/<%= @dinner.id %>/edit">
   <input type="submit" value="Edit">
 </form>
-<form action="/dinners/<%= @dinner.id %>/destroy">
-  <input type="submit" value="Destroy">
-</form>
+
+<%= link_to "Edit", @dinner %>
+
+<%= link_to "Destroy", @dinner, :method => :delete, :data => {:confirm => "Are You Sure?"} %>

@@ -11,9 +11,9 @@
 <div class="nav_block">
   <nav>
     <ul>
-      <li><a href="/" class="home">Home</a></li>
-      <li><a href="/dinners/new" class="create">Create New</a></li>
-      <li><a href="/dinners" class="index">Index</a></li>
+      <li><%= link_to "Home", root_path, :class => "home" %></li>
+      <li><%= link_to "Create New", "/dinners/new", :class => "create" %></li>
+      <li><%= link_to "Index", "/dinners", :class => "index" %>
     </ul>
   </nav>
 </div>
