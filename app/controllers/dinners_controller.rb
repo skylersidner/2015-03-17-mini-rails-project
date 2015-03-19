@@ -5,7 +5,7 @@ class DinnersController < ApplicationController
   end
   
   def new
-    
+    @dinners = Dinner.new
   end
   
   def create

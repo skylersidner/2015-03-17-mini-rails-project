@@ -84,3 +84,13 @@ h4 {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.new_dinner_form label {
+  color: #DDDCC5;
+  display: inline-block;
+  width: 90px;
+}
+
+.new_dinner_form input {
+  margin-top: 10px;
+}
