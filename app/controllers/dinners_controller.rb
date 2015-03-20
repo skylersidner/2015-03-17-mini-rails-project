@@ -11,7 +11,7 @@ class DinnersController < ApplicationController
   def create
     @dinner = Dinner.new(params[:dinner])
     if @dinner.save
-      redirect_to "/dinners"
+      redirect_to "/dinners/#{@dinner.id}"
     else      
       render "new"
     end

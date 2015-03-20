@@ -6,10 +6,7 @@
   <li><%= @dinner.starch %></li>
   <li><%= @dinner.veggie %></li>
 </ul>
-<form action="/dinners/<%= @dinner.id %>/edit">
-  <input type="submit" value="Edit">
-</form>
 
-<%= link_to "Edit", @dinner %>
+<%= link_to "Edit", "/dinners/#{@dinner.id}/edit", :class => "form_button"%>
 
 <%= link_to "Destroy", @dinner, :method => :delete, :data => {:confirm => "Are You Sure?"} %>

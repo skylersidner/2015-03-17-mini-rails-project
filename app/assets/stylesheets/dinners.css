@@ -94,3 +94,15 @@ h4 {
 .dinner_form input {
   margin-top: 10px;
 }
+
+a:link {
+  color: #DDDCC5;
+}
+
+.main_block a:hover {
+  color: #611427;
+}
+
+a:visited {
+  color: #958976;
+}
